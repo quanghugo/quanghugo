@@ -5,7 +5,7 @@ rssFullContent = true
 favicon = "/favicon.png"
 
 [footer]
-since = 2020
+since = 2025
 customText = ""
 
 [dateFormat]
@@ -18,8 +18,8 @@ subtitle = "Where I share my thoughts and experiences in life and technology"
 
 [sidebar.avatar]
 enabled = true
-local = true
-src = "img/avatar.png"
+local = false
+src = "/img/avatar.jpg"
 
 [article]
 headingAnchor = false

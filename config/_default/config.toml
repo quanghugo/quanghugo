@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl = "https://quanghugo.com"
+baseurl = "https://quanghugo.pages.dev"
 languageCode = "en-us"
 title = "Quang Hugo"
 

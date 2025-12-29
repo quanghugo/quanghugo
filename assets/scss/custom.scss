@@ -1,3 +1,14 @@
 /*
     You can add your own custom styles here.
 */
+
+/* Center the avatar image */
+.left-sidebar .sidebar-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-sidebar .sidebar-avatar img {
+  margin: 0 auto;
+}
