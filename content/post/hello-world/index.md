@@ -3,8 +3,9 @@ title: Hello World
 description: Welcome to Hugo site
 slug: hello-world
 date: 2025-12-29 00:00:00+0000
-image: cover.jpg
-weight: 1       # You can add weight to some posts to override the default sorting (date descending)
+categories:
+    - Introduction
+# weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 
 Welcome to my **_new blog_** about technical exploration! Here, I will share my learning journey about the tech world around us. Whether you're a seasoned developer or just starting out, I hope this space becomes a valuable resource for learning, inspiration, and technical discussions.
