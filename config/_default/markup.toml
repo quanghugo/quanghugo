@@ -24,3 +24,8 @@ lineNoStart = 1
 lineNos = true
 lineNumbersInTable = true
 tabWidth = 4
+
+# Mermaid diagram support
+[goldmark.parser.attribute]
+block = true
+title = true

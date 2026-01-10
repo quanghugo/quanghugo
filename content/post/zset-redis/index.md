@@ -49,7 +49,7 @@ This design works reliably in stable environments, but reveals a critical flaw d
 During a rolling deployment in Kubernetes, systems using in-memory timeout mechanisms can experience failures. Consider a scenario where an e-commerce system is processing orders during a deployment. The following sequence of events occurs:
 
 ```mermaid
-
+sequenceDiagram
     participant User as Customer
     participant Pod as Service Pod
     participant K8s as Kubernetes

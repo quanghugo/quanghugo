@@ -1,0 +1,43 @@
+<!-- Mermaid Diagram Support -->
+{{- $hasMermaid := false -}}
+{{- if .Page -}}
+    {{- if or (findRE "```mermaid" .Page.RawContent) (.Page.HasShortcode "mermaid") -}}
+        {{- $hasMermaid = true -}}
+    {{- end -}}
+{{- end -}}
+
+{{- if $hasMermaid -}}
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    
+    // Initialize Mermaid with theme support
+    const initMermaid = () => {
+        const theme = document.documentElement.dataset.scheme === 'dark' ? 'dark' : 'default';
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: theme,
+            themeVariables: {
+                darkMode: theme === 'dark'
+            }
+        });
+    };
+    
+    // Initialize on page load
+    initMermaid();
+    
+    // Re-initialize when theme changes
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'data-scheme') {
+                initMermaid();
+                mermaid.contentLoaded();
+            }
+        });
+    });
+    
+    observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['data-scheme']
+    });
+</script>
+{{- end -}}
