@@ -1,15 +1,13 @@
 ---
-title: When Virtual Threads Fail During Rolling Deployments - PART1
+title: The Status Order Fail During Rolling Deployments - PART1
 description: How in-memory timeout threads can cause production issues during Kubernetes rolling deployments, and why we need persistent timeout mechanisms.
-slug: rolling-virtual-thread
+slug: rolling-production-p1
 date: 2025-12-30 00:00:00+0000
 categories:
     - Design System
-    - Virtual Thread
-    - Redis
     - Production Issues
-    - Syntax
-# weight: 1       # You can add weight to some posts to override the default sorting (date descending)
+    - Distributed Systems
+    - Redis
 ---
 
 ## The Problem
